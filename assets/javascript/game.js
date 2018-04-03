@@ -11,7 +11,6 @@ var losses = 0;
 $(".thumbnail").on("click", "#ruby", function() {
     //totalScoreNumber goes up by 1
     totalScoreNumber += 1;
-    debugger;
         //Adds new score to #total-score-number div
         alert(totalScoreNumber);
         console.log(totalScoreNumber);
