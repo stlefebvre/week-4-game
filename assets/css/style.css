@@ -3,6 +3,7 @@ body {
     color: whitesmoke;
     background-image: url("https://github.com/stlefebvre/week-4-game/blob/master/assets/images/jeremy-perkins-390608-unsplash.jpg?raw=true");
     background-color: black;
+    /* overflow: scroll; */
     /*Figure out how to get image to stay static while all other content floats over*/
     /*Get all content to center of the page*/
 }
@@ -12,14 +13,45 @@ h1 {
     color: whitesmoke;
 }
 
+#game-instructions {
+    border: whitesmoke;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#buttons {
+    border: whitesmoke;
+    border-style: solid;
+    border-width: 1px;
+}
+
 .thumbnail {
     width: 100%;
     height: 100%;
     max-width: 100px;
     max-height: 100px;
+    display: inline-block;
 }
 
-#game-instructions {
+#random-number {
+    border: whitesmoke;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#wins-losses {
+    border: whitesmoke;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#total-score-text {
+    border: whitesmoke;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#total-score-number {
     border: whitesmoke;
     border-style: solid;
     border-width: 1px;
