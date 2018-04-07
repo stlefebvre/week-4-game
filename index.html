@@ -13,8 +13,6 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
-    <!--My JavaScript--> 
-    <script src="assets/javascript/game.js"></script>
 </head>
 <body>
     <!--Container for page-->
@@ -24,7 +22,7 @@
 
         <div class="container">
             <div class="row">
-                <div id="game-instructions">
+                <div class="col-xs-12 col-s-12 col-md-8 col-lg-8" id="game-instructions">
                     <p>You will be given a random number at the start of the game</p>
 
                     <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
@@ -34,14 +32,15 @@
                     <p>The value of each crystal is hidden from you until you click on it.</p>
 
                     <p>Each time the game starts, the game will change the values of each crystal.</p>
+
+                    <button id="start-button">Start Button</button>
                 </div>
             </div>
         </div>
 
         <div class="containter">
             <div class="row">
-                <div class="col-xs-6 col-lg-6" id="buttons">
-                <!--Figure out how to get buttons to line up horizontally-->
+                <div class="col-xs-12 col-s-12 col-md-6 col-lg-6" id="buttons">
                     <a href:"#" class="thumbnail">
                         <img src="https://github.com/stlefebvre/week-4-game/blob/master/assets/images/ruby-stone-500x500.jpg?raw=true" alt="rubyimg" id="ruby">
                     </a>
@@ -52,7 +51,6 @@
 
                     <a href="#" class="thumbnail">
                         <img src="https://github.com/stlefebvre/week-4-game/blob/master/assets/images/amethyst-polished.ngsversion.1418744429098.jpg?raw=true" alt="amethystimg" id="amethyst">
-                        <!--Figure out why this one is a different height than the rest of them, or find different image-->
                     </a>
 
                     <a href="#" class="thumbnail">
@@ -64,27 +62,29 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-lg-4" id="random-number"></div>
+                <div class="col-xs-6 col-s-6 col-md-3 col-lg-6" id="random-number">Goal number: </div>
 
-                <div class="col-lg-2" id="wins-losses">
-                    <li>Wins: </li>
-                    <li>Losses: </li>
+                <div class="col-xs-6 col-s-6 col-md-3 col-lg-2" id="wins-losses">
+                    <li id="winsNumber">Wins: </li>
+                    <li id="lossesNumber">Losses: </li>
                 </div>
             </div>
         </div>
 
         <div class="container">
             <div class="row">
-                <div class="col-lg-4" id="total=score-text">Your total score is: </div>
+                <div class="col-xs-12 col-s-12 col-md-4 col-lg-4" id="total-score-text">Your current score is: </div>
             </div>
         </div>
 
         <div class="container">
             <div class="row">
-                <div class="col-lg-4" id="total-score-number">
+                <div class="col-lg-4" id="total-score-number"> 
                 </div>
             </div>
         </div>
     </div> 
 </body>
+<!--My JavaScript--> 
+<script src="assets/javascript/game.js"></script>
 </html>
