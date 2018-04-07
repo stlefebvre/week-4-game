@@ -1,7 +1,9 @@
 $(document).ready(function() {
     // Random, whole number generated number
        function getRandomInt(min, max) {
-           return Math.floor(Math.random() * (max - min + 1));
+           console.log("getRandomInt")
+           return 5
+        //    return Math.floor(Math.random() * (max - min + 1));
        }
    
        //Variable to call getRandomInt function
@@ -31,10 +33,10 @@ $(document).ready(function() {
        function reset () {
            totalScoreNumber = 0;
            $("#total-score-number").text(totalScoreNumber);
-           rubyValue = (Math.floor(Math.random() * 10) + 1);
-           sapphire = (Math.floor(Math.random() * 10) + 1);
-           amethystValue = (Math.floor(Math.random() * 10) + 1);
-           emeraldValue = (Math.floor(Math.random() * 10) + 1);
+        //    rubyValue = (Math.floor(Math.random() * 10) + 1);
+        //    sapphire = (Math.floor(Math.random() * 10) + 1);
+        //    amethystValue = (Math.floor(Math.random() * 10) + 1);
+        //    emeraldValue = (Math.floor(Math.random() * 10) + 1);
        }
    
        //variable that defines a win or loss
@@ -43,7 +45,8 @@ $(document).ready(function() {
             wins++;
             alert("Win!");
             $("#winsNumber").text("Wins: " + wins);
-            $("#random-number").text(getRandomInt(10,50));
+            randomNumber = getRandomInt(10,50)
+            $("#random-number").text(randomNumber);
             reset();
         }
 
@@ -51,7 +54,8 @@ $(document).ready(function() {
             losses++;
             alert ("Loss!");
             $("#lossesNumber").text("Losses: " + losses);
-            $("#random-number").text(getRandomInt(10,50));
+            randomNumber = getRandomInt(10,50)
+            $("#random-number").text(randomNumber);
             reset();
         }
     };
@@ -68,7 +72,7 @@ $(document).ready(function() {
        // When ruby image is clicked
        $(".thumbnail").on("click", "#ruby", function() {
            //totalScoreNumber goes up by rubyValue
-           totalScoreNumber += rubyValue;
+           totalScoreNumber += 1;
            console.log(rubyValue)
                //Adds new score to #total-score-number div
                alert(totalScoreNumber);
@@ -80,7 +84,7 @@ $(document).ready(function() {
        //*When sapphire button is clicked
        $(".thumbnail").on("click", "#sapphire", function () {
            //totalScoreNumber goes up by sapphireValue
-           totalScoreNumber += sapphireValue;
+           totalScoreNumber += 3;
                //Adds new score to #total-score-number div
                alert(totalScoreNumber);
                console.log ("Sapphire input: " + totalScoreNumber);
@@ -90,7 +94,7 @@ $(document).ready(function() {
    
        $(".thumbnail").on("click", "#amethyst", function () {
            //totalScoreNumber goes up by amethystValue
-           totalScoreNumber += amethystValue;
+           totalScoreNumber += 5;
                //Adds new score to #total-score-number div
                alert(totalScoreNumber);
                console.log ("Amethyst input" + totalScoreNumber);
@@ -100,7 +104,7 @@ $(document).ready(function() {
    
        $(".thumbnail").on("click", "#emerald", function () {
            //totalScoreNumber goes up by emeraldValue
-           totalScoreNumber += emeraldValue;
+           totalScoreNumber += 10;
                //Adds new score to #total-score-number div
                alert(totalScoreNumber);
                console.log ("Emerald input: " + totalScoreNumber);
