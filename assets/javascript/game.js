@@ -43,7 +43,7 @@ $(document).ready(function() {
        function winOrLoss () {
         if (totalScoreNumber === randomNumber) {
             wins++;
-            alert("Win!");
+            // alert("Win!");
             $("#winsNumber").text("Wins: " + wins);
             randomNumber = getRandomInt(10,50)
             $("#random-number").text(randomNumber);
@@ -52,7 +52,7 @@ $(document).ready(function() {
 
         else if (totalScoreNumber > randomNumber) {
             losses++;
-            alert ("Loss!");
+            // alert ("Loss!");
             $("#lossesNumber").text("Losses: " + losses);
             randomNumber = getRandomInt(10,50)
             $("#random-number").text(randomNumber);
